@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+  <title id="title">對比式、融合式、統一式架構的能力範圍</title>
+  <desc id="desc">三種架構由特徵對齊到跨模態融合，再到端到端多模態處理。</desc>
+  <rect width="1200" height="320" rx="28" fill="#F7F3EA"/>
+  <g font-family="Noto Sans, Noto Sans CJK TC, Arial, sans-serif" fill="#302F2C">
+    <text x="600" y="40" text-anchor="middle" font-size="24" font-weight="700">從對齊到跨模態生成</text>
+
+    <g stroke="#8B877E" stroke-width="2" fill="#FFFDF8">
+      <rect x="55" y="88" width="300" height="145" rx="20"/>
+      <rect x="450" y="88" width="300" height="145" rx="20"/>
+      <rect x="845" y="88" width="300" height="145" rx="20"/>
+    </g>
+
+    <g text-anchor="middle">
+      <text x="205" y="120" font-size="19" font-weight="700">① 對比式</text>
+      <text x="205" y="146" font-size="13" fill="#77736B">學習跨模態相似度</text>
+      <text x="205" y="173" font-size="14">Image Encoder</text>
+      <text x="205" y="195" font-size="14">↕ 對比學習</text>
+      <text x="205" y="217" font-size="14">Text Encoder</text>
+
+      <text x="600" y="120" font-size="19" font-weight="700">② 融合式</text>
+      <text x="600" y="146" font-size="13" fill="#77736B">讓 LLM 讀懂視覺表示</text>
+      <text x="600" y="173" font-size="14">Vision Tokens</text>
+      <text x="600" y="195" font-size="14">↓ Connector / Attention</text>
+      <text x="600" y="217" font-size="14">LLM → Text</text>
+
+      <text x="995" y="120" font-size="19" font-weight="700">③ 統一式</text>
+      <text x="995" y="146" font-size="13" fill="#77736B">端到端跨模態處理</text>
+      <text x="995" y="173" font-size="14">Text + Image + Audio</text>
+      <text x="995" y="195" font-size="14">↓ Unified Model</text>
+      <text x="995" y="217" font-size="14">多模態輸出</text>
+    </g>
+
+    <g stroke="#A9A39A" stroke-width="2.5" fill="none">
+      <path d="M355 160 H440"/>
+      <path d="M750 160 H835"/>
+    </g>
+    <g fill="#A9A39A">
+      <path d="M440 160 l-10 -6 v12 z"/>
+      <path d="M835 160 l-10 -6 v12 z"/>
+    </g>
+
+    <text x="600" y="272" text-anchor="middle" font-size="13" fill="#77736B">
+      這不是必然的線性演進，而是三種不同的工程取捨
+    </text>
+    <text x="600" y="294" text-anchor="middle" font-size="12" fill="#8A857C">
+      架構可組合：例如融合式模型也能使用對比式預訓練的視覺編碼器
+    </text>
+  </g>
+</svg>

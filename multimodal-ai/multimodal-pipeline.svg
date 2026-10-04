@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
+  <title id="title">A common multimodal processing pipeline</title>
+  <desc id="desc">A conceptual pipeline from encoding to alignment, fusion and generation.</desc>
+  <rect width="1200" height="300" rx="28" fill="#F7F3EA"/>
+  <g font-family="Noto Sans, Arial, sans-serif" fill="#302F2C">
+    <text x="600" y="38" text-anchor="middle" font-size="23" font-weight="700">A Common Multimodal Pipeline</text>
+
+    <g stroke="#8B877E" stroke-width="2" fill="#FFFDF8">
+      <rect x="55" y="88" width="220" height="115" rx="18"/>
+      <rect x="335" y="88" width="220" height="115" rx="18"/>
+      <rect x="615" y="88" width="220" height="115" rx="18"/>
+      <rect x="895" y="88" width="220" height="115" rx="18"/>
+    </g>
+
+    <g text-anchor="middle">
+      <text x="165" y="121" font-size="20" font-weight="700">① 編碼 Encode</text>
+      <text x="165" y="150" font-size="13" fill="#77736B">Image / Text / Audio</text>
+      <text x="165" y="173" font-size="13" fill="#77736B">→ vectors / tokens</text>
+
+      <text x="445" y="121" font-size="20" font-weight="700">② 對齊 Align</text>
+      <text x="445" y="150" font-size="13" fill="#77736B">建立跨模態對應</text>
+      <text x="445" y="173" font-size="13" fill="#77736B">如 CLIP / SigLIP</text>
+
+      <text x="725" y="121" font-size="20" font-weight="700">③ 融合 Fuse</text>
+      <text x="725" y="150" font-size="13" fill="#77736B">跨模態 token 互動</text>
+      <text x="725" y="173" font-size="13" fill="#77736B">如 cross-attention</text>
+
+      <text x="1005" y="121" font-size="20" font-weight="700">④ 生成 Generate</text>
+      <text x="1005" y="150" font-size="13" fill="#77736B">回答或其他輸出</text>
+      <text x="1005" y="173" font-size="13" fill="#77736B">依模型架構而定</text>
+    </g>
+
+    <g stroke="#A6A096" stroke-width="2.5" fill="none">
+      <path d="M275 145 H325"/>
+      <path d="M555 145 H605"/>
+      <path d="M835 145 H885"/>
+    </g>
+    <g fill="#A6A096">
+      <path d="M325 145 l-10 -6 v12 z"/>
+      <path d="M605 145 l-10 -6 v12 z"/>
+      <path d="M885 145 l-10 -6 v12 z"/>
+    </g>
+    <text x="600" y="245" text-anchor="middle" font-size="13" fill="#77736B">注意：這是概念化流程；不同多模態架構可能省略、合併或重新安排其中步驟。</text>
+  </g>
+</svg>
