@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="640" viewBox="0 0 1200 640">
+<defs><style>
+.h{font:700 30px 'Noto Sans TC','Microsoft JhengHei',sans-serif;fill:#263D56}
+.sub{font:500 17px 'Noto Sans TC','Microsoft JhengHei',sans-serif;fill:#536878}
+.stage{font:700 21px 'Noto Sans TC','Microsoft JhengHei',sans-serif;fill:#263D56}
+.label{font:700 18px 'Noto Sans TC','Microsoft JhengHei',sans-serif;fill:#263D56}
+.body{font:500 16px 'Noto Sans TC','Microsoft JhengHei',sans-serif;fill:#43596A}
+.small{font:500 14px 'Noto Sans TC','Microsoft JhengHei',sans-serif;fill:#536878}
+</style><marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0 0L8 3L0 6Z" fill="#718B91"/></marker></defs>
+<rect width="1200" height="640" rx="28" fill="#FBF8F0"/>
+<circle cx="65" cy="60" r="25" fill="#E7E0F3"/><text x="65" y="68" text-anchor="middle" class="label">02</text>
+<text x="108" y="68" class="h">凍結與解凍策略</text>
+<text x="60" y="108" class="sub">雪花代表凍結參數，火焰代表可訓練參數。以下以 LLaVA-1.5 的典型配方為例。</text>
+<!-- legend -->
+<rect x="60" y="132" width="1080" height="58" rx="14" fill="#F1EEE6"/>
+<circle cx="95" cy="161" r="15" fill="#DCEAF4" stroke="#6C9CC6"/><path d="M95 150V172M86 156L104 166M86 166L104 156" stroke="#3E8BC6" stroke-width="2"/>
+<text x="120" y="167" class="body">凍結：參數不更新</text>
+<circle cx="350" cy="161" r="15" fill="#F6E5D3" stroke="#D9A16F"/><path d="M350 148C340 159 345 163 350 165C356 159 354 154 350 148Z" fill="#D96D3D"/>
+<text x="375" y="167" class="body">可訓練：參數會更新</text>
+<text x="1110" y="167" text-anchor="end" class="small">狀態會隨模型配方改變</text>
+<!-- Stage 1 -->
+<rect x="60" y="220" width="1080" height="160" rx="18" fill="#F1F7FC" stroke="#9CC6E7" stroke-width="2"/>
+<rect x="60" y="220" width="1080" height="45" rx="18" fill="#DDECF8"/><rect x="60" y="247" width="1080" height="18" fill="#DDECF8"/>
+<text x="85" y="250" class="stage">階段 1｜特徵對齊預訓練</text>
+<rect x="90" y="285" width="270" height="65" rx="12" fill="#DCEAF4" stroke="#6C9CC6" stroke-width="2"/>
+<text x="225" y="312" text-anchor="middle" class="label">視覺編碼器</text><text x="225" y="336" text-anchor="middle" class="small">❄ 凍結</text>
+<path d="M360 318H425" stroke="#718B91" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="435" y="285" width="270" height="65" rx="12" fill="#F6E5D3" stroke="#D9A16F" stroke-width="2"/>
+<text x="570" y="312" text-anchor="middle" class="label">投影層 MLP</text><text x="570" y="336" text-anchor="middle" class="small">可訓練</text>
+<path d="M705 318H770" stroke="#718B91" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="780" y="285" width="300" height="65" rx="12" fill="#E9E1F2" stroke="#A28BC9" stroke-width="2"/>
+<text x="930" y="312" text-anchor="middle" class="label">大型語言模型 LLM</text><text x="930" y="336" text-anchor="middle" class="small">❄ 凍結</text>
+<!-- Stage 2 -->
+<rect x="60" y="405" width="1080" height="160" rx="18" fill="#F1F8F2" stroke="#9ACBB6" stroke-width="2"/>
+<rect x="60" y="405" width="1080" height="45" rx="18" fill="#DDF1E7"/><rect x="60" y="432" width="1080" height="18" fill="#DDF1E7"/>
+<text x="85" y="435" class="stage">階段 2｜視覺指令微調</text>
+<rect x="90" y="470" width="270" height="65" rx="12" fill="#DCEAF4" stroke="#6C9CC6" stroke-width="2"/>
+<text x="225" y="497" text-anchor="middle" class="label">視覺編碼器</text><text x="225" y="521" text-anchor="middle" class="small">❄ 凍結</text>
+<path d="M360 503H425" stroke="#718B91" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="435" y="470" width="270" height="65" rx="12" fill="#F6E5D3" stroke="#D9A16F" stroke-width="2"/>
+<text x="570" y="497" text-anchor="middle" class="label">投影層 MLP</text><text x="570" y="521" text-anchor="middle" class="small">可訓練</text>
+<path d="M705 503H770" stroke="#718B91" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="780" y="470" width="300" height="65" rx="12" fill="#E9E1F2" stroke="#A28BC9" stroke-width="2"/>
+<text x="930" y="497" text-anchor="middle" class="label">大型語言模型 LLM</text><text x="930" y="521" text-anchor="middle" class="small">可訓練（低學習率）</text>
+<text x="60" y="605" class="small">凍結可降低更新成本與部分能力退化風險，但不能保證完全避免災難性遺忘。</text>
+</svg>

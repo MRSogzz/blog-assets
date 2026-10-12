@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FBF8F0"/><stop offset="1" stop-color="#EEF5F1"/></linearGradient>
+  <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#718B91"/></marker>
+  <style>
+    .h{font:700 30px 'Noto Sans TC','Microsoft JhengHei',sans-serif;fill:#263D56}
+    .sub{font:500 17px 'Noto Sans TC','Microsoft JhengHei',sans-serif;fill:#536878}
+    .label{font:700 19px 'Noto Sans TC','Microsoft JhengHei',sans-serif;fill:#263D56}
+    .body{font:500 15px 'Noto Sans TC','Microsoft JhengHei',sans-serif;fill:#3F5667}
+    .small{font:500 13px 'Noto Sans TC','Microsoft JhengHei',sans-serif;fill:#536878}
+  </style>
+</defs>
+<rect width="1200" height="620" rx="28" fill="url(#bg)"/>
+<circle cx="65" cy="60" r="25" fill="#DCE9F4"/><text x="65" y="68" text-anchor="middle" class="label">01</text>
+<text x="108" y="68" class="h">兩階段訓練總覽</text>
+<text x="60" y="108" class="sub">先建立視覺與語言的表示連接，再訓練模型依照視覺內容回應指令。</text>
+<!-- input -->
+<rect x="50" y="175" width="180" height="250" rx="18" fill="#FFFDF8" stroke="#C7D8E3" stroke-width="2"/>
+<rect x="75" y="205" width="130" height="92" rx="12" fill="#E5EFE7"/>
+<circle cx="117" cy="237" r="17" fill="#F2D8B5"/><path d="M93 282 Q105 249 126 267 Q145 248 186 282Z" fill="#8FAE9A"/>
+<text x="140" y="330" text-anchor="middle" class="label">圖文輸入</text>
+<text x="140" y="359" text-anchor="middle" class="body">圖片 + 文字描述</text>
+<text x="140" y="389" text-anchor="middle" class="small">成對的訓練樣本</text>
+<!-- stage 1 -->
+<rect x="270" y="155" width="400" height="290" rx="20" fill="#F1F7FC" stroke="#9CC6E7" stroke-width="2"/>
+<rect x="270" y="155" width="400" height="55" rx="20" fill="#DDECF8"/><rect x="270" y="190" width="400" height="20" fill="#DDECF8"/>
+<text x="470" y="190" text-anchor="middle" class="label">階段 1｜特徵對齊預訓練</text>
+<rect x="292" y="240" width="104" height="100" rx="13" fill="#DCEAF4" stroke="#6C9CC6"/>
+<text x="344" y="277" text-anchor="middle" class="body">視覺</text><text x="344" y="299" text-anchor="middle" class="body">編碼器</text><text x="344" y="323" text-anchor="middle" class="small">凍結</text>
+<rect x="418" y="240" width="104" height="100" rx="13" fill="#F6E5D3" stroke="#D9A16F"/>
+<text x="470" y="277" text-anchor="middle" class="body">投影層</text><text x="470" y="299" text-anchor="middle" class="body">MLP</text><text x="470" y="323" text-anchor="middle" class="small">可訓練</text>
+<rect x="544" y="240" width="104" height="100" rx="13" fill="#E9E1F2" stroke="#A28BC9"/>
+<text x="596" y="277" text-anchor="middle" class="body">大型語言</text><text x="596" y="299" text-anchor="middle" class="body">模型 LLM</text><text x="596" y="323" text-anchor="middle" class="small">凍結</text>
+<path d="M396 290H415 M522 290H541" stroke="#718B91" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="470" y="379" text-anchor="middle" class="body">學習視覺特徵的表示映射</text>
+<text x="470" y="407" text-anchor="middle" class="small">大量圖文對｜以 LLaVA-1.5 為例</text>
+<!-- arrow -->
+<path d="M682 300H716" stroke="#718B91" stroke-width="4" marker-end="url(#arrow)"/>
+<!-- stage 2 -->
+<rect x="730" y="155" width="420" height="290" rx="20" fill="#F1F8F2" stroke="#9ACBB6" stroke-width="2"/>
+<rect x="730" y="155" width="420" height="55" rx="20" fill="#DDF1E7"/><rect x="730" y="190" width="420" height="20" fill="#DDF1E7"/>
+<text x="940" y="190" text-anchor="middle" class="label">階段 2｜視覺指令微調</text>
+<rect x="752" y="240" width="110" height="100" rx="13" fill="#DCEAF4" stroke="#6C9CC6"/>
+<text x="807" y="277" text-anchor="middle" class="body">視覺</text><text x="807" y="299" text-anchor="middle" class="body">編碼器</text><text x="807" y="323" text-anchor="middle" class="small">凍結</text>
+<rect x="882" y="240" width="110" height="100" rx="13" fill="#F6E5D3" stroke="#D9A16F"/>
+<text x="937" y="277" text-anchor="middle" class="body">投影層</text><text x="937" y="299" text-anchor="middle" class="body">MLP</text><text x="937" y="323" text-anchor="middle" class="small">可訓練</text>
+<rect x="1012" y="240" width="116" height="100" rx="13" fill="#E9E1F2" stroke="#A28BC9"/>
+<text x="1070" y="277" text-anchor="middle" class="body">大型語言</text><text x="1070" y="299" text-anchor="middle" class="body">模型 LLM</text><text x="1070" y="323" text-anchor="middle" class="small">可訓練</text>
+<path d="M862 290H879 M992 290H1009" stroke="#718B91" stroke-width="3" marker-end="url(#arrow)"/>
+<text x="940" y="379" text-anchor="middle" class="body">學習依據圖片與指令生成回答</text>
+<text x="940" y="407" text-anchor="middle" class="small">混合視覺問答、OCR、推理等任務數據</text>
+<!-- output -->
+<path d="M1154 300H1172" stroke="#718B91" stroke-width="3" marker-end="url(#arrow)"/>
+<rect x="1035" y="475" width="115" height="70" rx="15" fill="#FFFDF8" stroke="#9ACBB6" stroke-width="2"/>
+<text x="1092" y="503" text-anchor="middle" class="label">回答</text><text x="1092" y="525" text-anchor="middle" class="small">文字輸出</text>
+<path d="M940 445V460H1092V472" fill="none" stroke="#718B91" stroke-width="2" stroke-dasharray="5 5" marker-end="url(#arrow)"/>
+<text x="60" y="585" class="small">示意圖：不同模型與訓練配方可能採用不同的凍結策略。</text>
+</svg>

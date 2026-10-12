@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650">
+<defs><style>
+.h{font:700 30px 'Noto Sans TC','Microsoft JhengHei',sans-serif;fill:#263D56}
+.sub{font:500 17px 'Noto Sans TC','Microsoft JhengHei',sans-serif;fill:#536878}
+.label{font:700 19px 'Noto Sans TC','Microsoft JhengHei',sans-serif;fill:#263D56}
+.body{font:500 15px 'Noto Sans TC','Microsoft JhengHei',sans-serif;fill:#43596A}
+.small{font:500 13px 'Noto Sans TC','Microsoft JhengHei',sans-serif;fill:#536878}
+.th{font:700 15px 'Noto Sans TC','Microsoft JhengHei',sans-serif;fill:#FFFFFF}
+</style></defs>
+<rect width="1200" height="650" rx="28" fill="#FBF8F0"/>
+<circle cx="65" cy="60" r="25" fill="#DCE9F4"/><text x="65" y="68" text-anchor="middle" class="label">04</text>
+<text x="108" y="68" class="h">視覺編碼器微調取捨</text>
+<text x="60" y="108" class="sub">凍結、部分微調與全量微調沒有絕對排名；策略取決於任務、資料、算力與風險。</text>
+<!-- table -->
+<rect x="50" y="150" width="1100" height="390" rx="16" fill="#FFFDF8" stroke="#C8D6D9" stroke-width="2"/>
+<path d="M50 166Q50 150 66 150H1134Q1150 150 1150 166V205H50Z" fill="#6D9FC4"/>
+<g class="th" text-anchor="middle">
+<text x="155" y="183">策略</text><text x="370" y="183">更新範圍</text><text x="565" y="183">適應能力</text><text x="735" y="183">成本</text><text x="900" y="183">主要風險</text><text x="1060" y="183">可能適用情境</text>
+</g>
+<path d="M50 205H1150 M50 316H1150 M50 427H1150 M275 150V540 M470 150V540 M660 150V540 M810 150V540 M990 150V540" stroke="#D7E0E2" stroke-width="1.5"/>
+<rect x="50" y="205" width="1100" height="111" fill="#EEF5F8" opacity=".65"/>
+<rect x="50" y="316" width="1100" height="111" fill="#F0F5EE" opacity=".65"/>
+<rect x="50" y="427" width="1100" height="113" fill="#FBF0E5" opacity=".65"/>
+<g class="label" text-anchor="middle">
+<text x="155" y="253">完全凍結</text><text x="155" y="278" class="small">Frozen</text>
+<text x="155" y="364">部分微調</text><text x="155" y="389" class="small">Partial</text>
+<text x="155" y="475">全量微調</text><text x="155" y="500" class="small">Full</text>
+</g>
+<g class="body" text-anchor="middle">
+<text x="370" y="253">不更新編碼器</text><text x="565" y="253">較低</text><text x="735" y="253">最低</text><text x="900" y="245">表示適應不足</text><text x="900" y="267">（視任務而定）</text><text x="1060" y="245">資料有限、</text><text x="1060" y="267">重視穩定</text>
+<text x="370" y="364">只更新部分層</text><text x="565" y="364">中等至高</text><text x="735" y="364">中等</text><text x="900" y="356">層數選擇不當</text><text x="900" y="378">或過度適應</text><text x="1060" y="356">需要領域適應</text><text x="1060" y="378">且資源有限</text>
+<text x="370" y="475">更新全部編碼器</text><text x="565" y="475">可能最高</text><text x="735" y="475">最高</text><text x="900" y="467">過擬合、</text><text x="900" y="489">訓練不穩定</text><text x="1060" y="467">大量領域資料、</text><text x="1060" y="489">需要深度適應</text>
+</g>
+<rect x="50" y="565" width="1100" height="55" rx="14" fill="#EAF1F5"/>
+<text x="75" y="598" class="label">工程原則</text><text x="205" y="598" class="body">先以凍結模型建立基線，再比較部分微調與全量微調；以驗證集衡量效能、成本與穩定性。</text>
+</svg>
