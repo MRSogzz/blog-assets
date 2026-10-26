@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="790" viewBox="0 0 1200 790" role="img" aria-labelledby="title desc">
+<title id="title">多模態評估的六個評估維度</title>
+<desc id="desc">感知、落地定位、推理、幻覺、時序理解與組合理解。這是教學用分析框架，不代表固定階層。</desc>
+<defs>
+ <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#FBF8F1"/><stop offset="1" stop-color="#F1EBDD"/></linearGradient>
+ <pattern id="grain" width="25" height="25" patternUnits="userSpaceOnUse"><circle cx="3" cy="5" r="1" fill="#B8AD9B" opacity=".18"/></pattern>
+ <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#756D60" flood-opacity=".10"/></filter>
+</defs>
+<rect width="1200" height="790" rx="28" fill="url(#bg)"/><rect width="1200" height="790" rx="28" fill="url(#grain)"/>
+<g fill="none" stroke="#9DAF9D" stroke-width="2" opacity=".55" stroke-linecap="round"><path d="M44 99Q70 62 104 47M64 81Q44 68 43 48Q62 51 70 72M82 65Q80 47 101 31Q106 48 88 64"/></g>
+<text x="78" y="72" font-family="Arial,sans-serif" font-size="14" font-weight="700" letter-spacing="3" fill="#758777">MULTIMODAL AI · EVALUATION</text>
+<text x="78" y="124" font-family="'Noto Sans TC','Microsoft JhengHei',sans-serif" font-size="37" font-weight="700" fill="#343A35">模型真的理解了，還是在猜？</text>
+<text x="80" y="158" font-family="'Noto Sans TC','Microsoft JhengHei',sans-serif" font-size="17" fill="#68716A">理解不是單一分數；評估需要拆解不同能力與失敗模式。</text>
+<rect x="420" y="179" width="360" height="38" rx="19" fill="#E8E2D6" stroke="#D7CEBF"/>
+<text x="600" y="203" text-anchor="middle" font-family="'Noto Sans TC','Microsoft JhengHei',sans-serif" font-size="16" font-weight="700" fill="#50584F">六個評估維度 · 彼此可能重疊</text>
+<g stroke="#C9C2B5" stroke-width="1.5" fill="none"><path d="M600 217V232H240V245M600 232V245M600 232H960V245"/></g>
+
+<g filter="url(#shadow)">
+ <rect x="65" y="245" width="350" height="174" rx="18" fill="#FFFCF6" stroke="#DED7CA"/>
+ <rect x="65" y="245" width="350" height="56" rx="18" fill="#DCE9E1"/><rect x="65" y="282" width="350" height="19" fill="#DCE9E1"/>
+ <rect x="82" y="259" width="39" height="29" rx="9" fill="#FFFCF6" stroke="#527A68" stroke-opacity=".35"/>
+ <text x="101.5" y="278" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#527A68">01</text>
+ <text x="133" y="279" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#374039">Perception</text>
+ <text x="85" y="328" font-family="'Noto Sans TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#527A68">感知</text>
+ <text x="85" y="356" font-family="'Noto Sans TC','Microsoft JhengHei',sans-serif" font-size="14.5" fill="#505950">能不能正確辨識？</text>
+ <line x1="85" y1="372" x2="395" y2="372" stroke="#E8E1D6"/>
+ <text x="85" y="396" font-family="'Noto Sans TC','Microsoft JhengHei',sans-serif" font-size="12.5" fill="#777A70">代表基準</text>
+ <text x="153" y="396" font-family="Arial,'Noto Sans TC','Microsoft JhengHei',sans-serif" font-size="13.5" font-weight="700" fill="#4C554D">VQA v2 · MME</text>
+</g>
+<g filter="url(#shadow)">
+ <rect x="425" y="245" width="350" height="174" rx="18" fill="#FFFCF6" stroke="#DED7CA"/>
+ <rect x="425" y="245" width="350" height="56" rx="18" fill="#DCE7F2"/><rect x="425" y="282" width="350" height="19" fill="#DCE7F2"/>
+ <rect x="442" y="259" width="39" height="29" rx="9" fill="#FFFCF6" stroke="#567A9C" stroke-opacity=".35"/>
+ <text x="461.5" y="278" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#567A9C">02</text>
+ <text x="493" y="279" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#374039">Grounding</text>
+ <text x="445" y="328" font-family="'Noto Sans TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#567A9C">落地定位</text>
+ <text x="445" y="356" font-family="'Noto Sans TC','Microsoft JhengHei',sans-serif" font-size="14.5" fill="#505950">能不能指出資訊在哪？</text>
+ <line x1="445" y1="372" x2="755" y2="372" stroke="#E8E1D6"/>
+ <text x="445" y="396" font-family="'Noto Sans TC','Microsoft JhengHei',sans-serif" font-size="12.5" fill="#777A70">代表基準</text>
+ <text x="513" y="396" font-family="Arial,'Noto Sans TC','Microsoft JhengHei',sans-serif" font-size="13.5" font-weight="700" fill="#4C554D">VisualWebArena</text>
+</g>
+<g filter="url(#shadow)">
+ <rect x="785" y="245" width="350" height="174" rx="18" fill="#FFFCF6" stroke="#DED7CA"/>
+ <rect x="785" y="245" width="350" height="56" rx="18" fill="#E8E0F2"/><rect x="785" y="282" width="350" height="19" fill="#E8E0F2"/>
+ <rect x="802" y="259" width="39" height="29" rx="9" fill="#FFFCF6" stroke="#806A9C" stroke-opacity=".35"/>
+ <text x="821.5" y="278" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#806A9C">03</text>
+ <text x="853" y="279" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#374039">Reasoning</text>
+ <text x="805" y="328" font-family="'Noto Sans TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#806A9C">推理</text>
+ <text x="805" y="356" font-family="'Noto Sans TC','Microsoft JhengHei',sans-serif" font-size="14.5" fill="#505950">能不能根據視覺資訊推理？</text>
+ <line x1="805" y1="372" x2="1115" y2="372" stroke="#E8E1D6"/>
+ <text x="805" y="396" font-family="'Noto Sans TC','Microsoft JhengHei',sans-serif" font-size="12.5" fill="#777A70">代表基準</text>
+ <text x="873" y="396" font-family="Arial,'Noto Sans TC','Microsoft JhengHei',sans-serif" font-size="13.5" font-weight="700" fill="#4C554D">MMMU · MathVista</text>
+</g>
+<g filter="url(#shadow)">
+ <rect x="65" y="445" width="350" height="174" rx="18" fill="#FFFCF6" stroke="#DED7CA"/>
+ <rect x="65" y="445" width="350" height="56" rx="18" fill="#F4DFD7"/><rect x="65" y="482" width="350" height="19" fill="#F4DFD7"/>
+ <rect x="82" y="459" width="39" height="29" rx="9" fill="#FFFCF6" stroke="#B66F5B" stroke-opacity=".35"/>
+ <text x="101.5" y="478" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#B66F5B">04</text>
+ <text x="133" y="479" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#374039">Hallucination</text>
+ <text x="85" y="528" font-family="'Noto Sans TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#B66F5B">幻覺檢測</text>
+ <text x="85" y="556" font-family="'Noto Sans TC','Microsoft JhengHei',sans-serif" font-size="14.5" fill="#505950">是否生成圖中不存在的資訊？</text>
+ <line x1="85" y1="572" x2="395" y2="572" stroke="#E8E1D6"/>
+ <text x="85" y="596" font-family="'Noto Sans TC','Microsoft JhengHei',sans-serif" font-size="12.5" fill="#777A70">代表基準</text>
+ <text x="153" y="596" font-family="Arial,'Noto Sans TC','Microsoft JhengHei',sans-serif" font-size="13.5" font-weight="700" fill="#4C554D">POPE · HallusionBench</text>
+</g>
+<g filter="url(#shadow)">
+ <rect x="425" y="445" width="350" height="174" rx="18" fill="#FFFCF6" stroke="#DED7CA"/>
+ <rect x="425" y="445" width="350" height="56" rx="18" fill="#F2E8CC"/><rect x="425" y="482" width="350" height="19" fill="#F2E8CC"/>
+ <rect x="442" y="459" width="39" height="29" rx="9" fill="#FFFCF6" stroke="#A08442" stroke-opacity=".35"/>
+ <text x="461.5" y="478" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#A08442">05</text>
+ <text x="493" y="479" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#374039">Temporal Understanding</text>
+ <text x="445" y="528" font-family="'Noto Sans TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#A08442">時序理解</text>
+ <text x="445" y="556" font-family="'Noto Sans TC','Microsoft JhengHei',sans-serif" font-size="14.5" fill="#505950">能否理解事件順序與變化？</text>
+ <line x1="445" y1="572" x2="755" y2="572" stroke="#E8E1D6"/>
+ <text x="445" y="596" font-family="'Noto Sans TC','Microsoft JhengHei',sans-serif" font-size="12.5" fill="#777A70">代表基準</text>
+ <text x="513" y="596" font-family="Arial,'Noto Sans TC','Microsoft JhengHei',sans-serif" font-size="13.5" font-weight="700" fill="#4C554D">Video-MME · M3-Bench</text>
+</g>
+<g filter="url(#shadow)">
+ <rect x="785" y="445" width="350" height="174" rx="18" fill="#FFFCF6" stroke="#DED7CA"/>
+ <rect x="785" y="445" width="350" height="56" rx="18" fill="#DDE9EC"/><rect x="785" y="482" width="350" height="19" fill="#DDE9EC"/>
+ <rect x="802" y="459" width="39" height="29" rx="9" fill="#FFFCF6" stroke="#527F89" stroke-opacity=".35"/>
+ <text x="821.5" y="478" text-anchor="middle" font-family="Arial,sans-serif" font-size="12" font-weight="700" fill="#527F89">06</text>
+ <text x="853" y="479" font-family="Arial,sans-serif" font-size="16" font-weight="700" fill="#374039">Compositional Understanding</text>
+ <text x="805" y="528" font-family="'Noto Sans TC','Microsoft JhengHei',sans-serif" font-size="20" font-weight="700" fill="#527F89">組合理解</text>
+ <text x="805" y="556" font-family="'Noto Sans TC','Microsoft JhengHei',sans-serif" font-size="14.5" fill="#505950">能否理解物件與關係？</text>
+ <line x1="805" y1="572" x2="1115" y2="572" stroke="#E8E1D6"/>
+ <text x="805" y="596" font-family="'Noto Sans TC','Microsoft JhengHei',sans-serif" font-size="12.5" fill="#777A70">代表基準</text>
+ <text x="873" y="596" font-family="Arial,'Noto Sans TC','Microsoft JhengHei',sans-serif" font-size="13.5" font-weight="700" fill="#4C554D">MMMU · MMBench</text>
+</g>
+<rect x="65" y="665" width="1070" height="62" rx="15" fill="#E9E5DA" stroke="#D8D0C1"/>
+<circle cx="94" cy="696" r="10" fill="#D3B78B"/><path d="M89 696l4 4 7-9" fill="none" stroke="#FFFCF6" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+<text x="116" y="691" font-family="'Noto Sans TC','Microsoft JhengHei',sans-serif" font-size="14.5" font-weight="700" fill="#424A42">閱讀原則</text>
+<text x="116" y="712" font-family="'Noto Sans TC','Microsoft JhengHei',sans-serif" font-size="13.5" fill="#5E665D">這是便於分析的教學框架，不是固定階層；幻覺可能跨越多個維度。</text>
+<text x="1132" y="760" text-anchor="end" font-family="Arial,sans-serif" font-size="11" letter-spacing="1.3" fill="#969184">01 / EVALUATION DIMENSIONS</text>
+</svg>

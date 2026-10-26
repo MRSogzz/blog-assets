@@ -1,0 +1,73 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="560" viewBox="0 0 1200 560" role="img" aria-labelledby="title desc">
+  <title id="title">VLA 模型：從感知到行動的閉環</title>
+  <desc id="desc">機器人透過視覺觀察與語言指令形成動作計畫，在物理環境中執行，再依據感測回饋調整下一步行動。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#64766C"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#647C91"/>
+    </marker>
+    <style>
+      .title{font:700 30px 'Noto Sans TC','Microsoft JhengHei',sans-serif;fill:#303A36}
+      .subtitle{font:16px 'Noto Sans TC','Microsoft JhengHei',sans-serif;fill:#68736D}
+      .label{font:700 20px 'Noto Sans TC','Microsoft JhengHei',sans-serif;fill:#34413B}
+      .body{font:15px 'Noto Sans TC','Microsoft JhengHei',sans-serif;fill:#56625B}
+      .small{font:13px 'Noto Sans TC','Microsoft JhengHei',sans-serif;fill:#6B756E}
+      .arrow{fill:none;stroke:#64766C;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#arrow)}
+      .feedback{fill:none;stroke:#647C91;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:8 7;marker-end:url(#arrowBlue)}
+    </style>
+  </defs>
+  <rect width="1200" height="560" rx="24" fill="#F8F5EE"/>
+  <circle cx="1080" cy="76" r="42" fill="#E9E1D2" opacity=".55"/>
+  <circle cx="1120" cy="106" r="17" fill="#D9E4DE" opacity=".8"/>
+  <text x="64" y="66" class="title">VLA：從感知到行動的閉環</text>
+  <text x="64" y="96" class="subtitle">Vision · Language · Action｜理解指令，操作實體環境，再從結果中調整</text>
+
+  <!-- Main stages -->
+  <g>
+    <rect x="62" y="166" width="220" height="166" rx="18" fill="#E6EEE8" stroke="#C8D7CC" stroke-width="1.5"/>
+    <circle cx="96" cy="201" r="17" fill="#C7D9CD"/>
+    <path d="M87 201 Q96 190 105 201 Q96 212 87 201Z" fill="none" stroke="#496858" stroke-width="2"/>
+    <circle cx="96" cy="201" r="3.5" fill="#496858"/>
+    <text x="86" y="244" class="label">感知環境</text>
+    <text x="86" y="272" class="body">相機、深度與感測器</text>
+    <text x="86" y="296" class="body">取得物體與場景資訊</text>
+
+    <rect x="344" y="166" width="220" height="166" rx="18" fill="#EEE8F2" stroke="#D8C9E2" stroke-width="1.5"/>
+    <circle cx="378" cy="201" r="17" fill="#D9C9E4"/>
+    <path d="M370 195 H386 M370 201 H382 M370 207 H385" stroke="#725B83" stroke-width="2" stroke-linecap="round"/>
+    <text x="368" y="244" class="label">理解指令</text>
+    <text x="368" y="272" class="body">結合視覺與語言</text>
+    <text x="368" y="296" class="body">判斷任務目標與限制</text>
+
+    <rect x="626" y="166" width="220" height="166" rx="18" fill="#F5E8D9" stroke="#E7CFB4" stroke-width="1.5"/>
+    <circle cx="660" cy="201" r="17" fill="#EBD2B7"/>
+    <path d="M652 207 L660 193 L668 207 M655 202 H665" fill="none" stroke="#8A6847" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="650" y="244" class="label">規劃動作</text>
+    <text x="650" y="272" class="body">產生動作序列或控制量</text>
+    <text x="650" y="296" class="body">考慮位置、力與安全</text>
+
+    <rect x="908" y="166" width="230" height="166" rx="18" fill="#E4EBF1" stroke="#C8D6E1" stroke-width="1.5"/>
+    <circle cx="942" cy="201" r="17" fill="#C9D8E5"/>
+    <path d="M934 206 V196 L942 190 L950 196 V206 M938 206 V200 H946 V206" fill="none" stroke="#526F86" stroke-width="2" stroke-linejoin="round"/>
+    <text x="932" y="244" class="label">執行動作</text>
+    <text x="932" y="272" class="body">機器人與環境互動</text>
+    <text x="932" y="296" class="body">移動、抓取、推拉等</text>
+  </g>
+
+  <path d="M282 249 H335" class="arrow"/>
+  <path d="M564 249 H617" class="arrow"/>
+  <path d="M846 249 H899" class="arrow"/>
+
+  <!-- Feedback loop -->
+  <path d="M1023 332 V400 Q1023 425 998 425 H188 Q162 425 162 400 V342" class="feedback"/>
+  <rect x="376" y="400" width="410" height="48" rx="24" fill="#E5EBE8" stroke="#C7D6CE"/>
+  <text x="581" y="430" text-anchor="middle" class="label" style="font-size:18px">感測回饋：比較結果，更新下一步</text>
+
+  <g transform="translate(64 486)">
+    <circle cx="9" cy="8" r="5" fill="#64766C"/>
+    <text x="24" y="13" class="small">核心概念：不是一次生成答案，而是持續感知、行動與修正</text>
+  </g>
+  <text x="1136" y="520" text-anchor="end" class="small">VLA / Embodied AI</text>
+</svg>

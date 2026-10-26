@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="620" viewBox="0 0 1200 620" role="img" aria-labelledby="title desc">
+  <title id="title">World Model：預測未來，輔助規劃</title>
+  <desc id="desc">世界模型從目前觀察與候選動作預測可能的未來狀態，規劃器比較不同結果並選擇動作；執行後再觀察真實環境，修正預測。</desc>
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#64766C"/>
+    </marker>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="7" refY="3" orient="auto">
+      <path d="M0,0 L7,3 L0,6 Z" fill="#647C91"/>
+    </marker>
+    <style>
+      .title{font:700 30px 'Noto Sans TC','Microsoft JhengHei',sans-serif;fill:#303A36}
+      .subtitle{font:16px 'Noto Sans TC','Microsoft JhengHei',sans-serif;fill:#68736D}
+      .label{font:700 19px 'Noto Sans TC','Microsoft JhengHei',sans-serif;fill:#34413B}
+      .body{font:15px 'Noto Sans TC','Microsoft JhengHei',sans-serif;fill:#56625B}
+      .small{font:13px 'Noto Sans TC','Microsoft JhengHei',sans-serif;fill:#6B756E}
+      .arrow{fill:none;stroke:#64766C;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;marker-end:url(#arrow)}
+      .dashed{fill:none;stroke:#647C91;stroke-width:2.5;stroke-linecap:round;stroke-dasharray:7 7;marker-end:url(#arrowBlue)}
+    </style>
+  </defs>
+  <rect width="1200" height="620" rx="24" fill="#F8F5EE"/>
+  <circle cx="1095" cy="82" r="52" fill="#E9E1D2" opacity=".5"/>
+  <text x="64" y="66" class="title">World Model：預測未來，輔助規劃</text>
+  <text x="64" y="96" class="subtitle">模型先預測「如果這樣做，可能會發生什麼」，再用預測結果協助選擇動作</text>
+
+  <!-- Observation -->
+  <rect x="62" y="178" width="220" height="154" rx="18" fill="#E6EEE8" stroke="#C8D7CC" stroke-width="1.5"/>
+  <g transform="translate(88 202)">
+    <rect x="0" y="0" width="54" height="42" rx="7" fill="#D2E1D6" stroke="#6D8978" stroke-width="1.5"/>
+    <circle cx="27" cy="21" r="10" fill="#F8F5EE" stroke="#6D8978" stroke-width="2"/>
+    <circle cx="27" cy="21" r="4" fill="#6D8978"/>
+    <path d="M8 48 H47" stroke="#6D8978" stroke-width="2" stroke-linecap="round"/>
+  </g>
+  <text x="88" y="277" class="label">目前觀察</text>
+  <text x="88" y="303" class="body">場景、物體、機器人狀態</text>
+
+  <!-- World model -->
+  <rect x="354" y="158" width="258" height="194" rx="20" fill="#EEE8F2" stroke="#D8C9E2" stroke-width="1.5"/>
+  <circle cx="483" cy="204" r="27" fill="#D9C9E4"/>
+  <path d="M466 204 Q475 188 483 204 T500 204 M483 187 V221" fill="none" stroke="#725B83" stroke-width="2" stroke-linecap="round"/>
+  <text x="483" y="256" text-anchor="middle" class="label">世界模型</text>
+  <text x="483" y="284" text-anchor="middle" class="body">學習環境如何變化</text>
+  <text x="483" y="309" text-anchor="middle" class="body">根據狀態與動作預測未來</text>
+
+  <path d="M282 254 H345" class="arrow"/>
+
+  <!-- Future branches -->
+  <path d="M612 222 H655 Q672 222 672 205 H699" class="arrow"/>
+  <path d="M612 288 H655 Q672 288 672 305 H699" class="arrow"/>
+  <rect x="708" y="150" width="222" height="112" rx="16" fill="#F5E8D9" stroke="#E7CFB4" stroke-width="1.5"/>
+  <text x="729" y="183" class="label">候選未來 A</text>
+  <text x="729" y="211" class="body">路徑較短</text>
+  <text x="729" y="235" class="small">但可能靠近障礙物</text>
+  <rect x="708" y="278" width="222" height="112" rx="16" fill="#E4EBF1" stroke="#C8D6E1" stroke-width="1.5"/>
+  <text x="729" y="311" class="label">候選未來 B</text>
+  <text x="729" y="339" class="body">路徑較長</text>
+  <text x="729" y="363" class="small">但可能更安全</text>
+
+  <!-- Planner -->
+  <rect x="976" y="208" width="164" height="128" rx="18" fill="#E5EBE8" stroke="#C7D6CE" stroke-width="1.5"/>
+  <path d="M1002 241 L1014 253 L1035 229" fill="none" stroke="#587362" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="1000" y="278" class="label">規劃器</text>
+  <text x="1000" y="302" class="body">比較預測結果</text>
+  <text x="1000" y="322" class="body">選擇動作</text>
+  <path d="M930 205 H967" class="arrow"/>
+  <path d="M930 334 H950 Q968 334 968 317" class="arrow"/>
+
+  <!-- Execution and feedback -->
+  <rect x="354" y="438" width="258" height="100" rx="18" fill="#E4EBF1" stroke="#C8D6E1" stroke-width="1.5"/>
+  <text x="483" y="474" text-anchor="middle" class="label">在真實環境執行</text>
+  <text x="483" y="502" text-anchor="middle" class="body">取得實際結果與新觀察</text>
+  <path d="M1058 336 V390 Q1058 420 1028 420 H646 Q612 420 612 444" class="arrow"/>
+  <path d="M354 488 H292 Q250 488 250 446 V342" class="dashed"/>
+  <rect x="65" y="405" width="210" height="82" rx="15" fill="#F1E9D9" stroke="#E0D1B9"/>
+  <text x="84" y="435" class="label" style="font-size:17px">真實回饋</text>
+  <text x="84" y="460" class="body">修正預測與後續計畫</text>
+
+  <text x="64" y="576" class="small">注意：世界模型提供的是對可能未來的預測，不是對真實結果的保證。</text>
+  <text x="1136" y="596" text-anchor="end" class="small">World Model / Planning</text>
+</svg>
